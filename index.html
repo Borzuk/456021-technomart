@@ -29,7 +29,7 @@
       </section>
 
       <!-- Блок с заголовком и контактами -->
-      <section class="page-header__main">
+      <section class="page-header__main wrapper">
         <h2 class="heading2 site-name">
           Интернет-магазин строительных материалов<br />и инструментов для ремонта
         </h2>
@@ -44,7 +44,7 @@
       </section>
 
       <!-- Главное меню -->
-      <nav class="main-menu">
+      <nav class="main-menu wrapper">
         <ul class="main-menu__list">
           <li><a href="#" class="main-menu__item">Главная</a></li>
           <li><a href="#" class="main-menu__item">Компания</a></li>
@@ -327,22 +327,26 @@
 
 <!-- Всплывающее окно формы обратной связи -->
   <section class="modal modal--write-us">
-    <h2 class="visibility-hidden">Напишите нам</h2>
+    <h2 class="visually-hidden">Напишите нам</h2>
     <button type="button" name="close-write-us" class="modal-close">Закрыть</button>
     <form action="/" method="post" class="form write-us">
-      <label>
-        Ваше имя:
-        <input type="text" name="person" value="" placeholder="Представьтесь пожалуйста">
-      </label>
-      <label>
-        Ваше e-mail:
-        <input type="text" name="email" value="" placeholder="Для отправки ответа">
-      </label>
-      <label>
-        Текст письма:
-        <textarea name="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-      </label>
-      <button type="submit" name="write-us" class="btn write-us__submit">Отправить</button>
+      <div class="wrapper">
+        <label>
+          Ваше имя:
+          <input type="text" name="person" value="" placeholder="Представьтесь пожалуйста">
+        </label>
+        <label>
+          Ваше e-mail:
+          <input type="text" name="email" value="" placeholder="Для отправки ответа">
+        </label>
+        <label>
+          Текст письма:
+          <textarea name="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <div class="wrapper-submit">
+        <button type="submit" name="write-us" class="btn btn--uppercase write-us__submit">Отправить</button>
+      </div>
     </form>
   </section>
 
