@@ -462,7 +462,7 @@ a {
               min-height: 40px;
               top: calc(50% - 20px);
               left: 25px;
-              background: transparent url(/img/icon-left.svg) 0 0 no-repeat;
+              background: transparent url(img/icon-left.svg) 0 0 no-repeat;
               font-size: 0;
             }
             .slider__control--right {
@@ -470,7 +470,7 @@ a {
               min-height: 40px;
               top: calc(50% - 20px);
               right: 25px;
-              background: transparent url(/img/icon-right.svg) 0 0 no-repeat;
+              background: transparent url(img/icon-right.svg) 0 0 no-repeat;
               font-size: 0;
             }
 
