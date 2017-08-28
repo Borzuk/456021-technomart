@@ -66,18 +66,18 @@
         <div class="promo-block__column-1">
         <section class="slider">
           <div class="slider__item">
-            <div class="slider__title">
-              <h3 class="heading3 slider__title--main">Перфораторы</h3>
-              <span class="slider__title--additional">Настоящие мужские игрушки</span>
+            <div class="slider__wrap">
+              <h3 class="slider__title">Перфораторы</h3>
+              <span class="slider__description">Настоящие мужские игрушки</span>
             </div>
-            <img class="products__item-picture" src="img/perforator.jpg" width="620" height="270" alt="Перфораторы - настоящие мужские игрушки">
+            <img class="slider__image" src="img/perforator.jpg" width="620" height="270" alt="Перфораторы - настоящие мужские игрушки">
           </div>
           <div class="slider__item visually-hidden">
-            <div class="slider__title">
-              <h3 class="heading3 slider__title--main">Дрели</h3>
-              <span class="slider__title--additional">Соседям на радость</span>
+            <div class="slider__wrap">
+              <h3 class="slider__title">Дрели</h3>
+              <span class="slider__description">Соседям на радость</span>
             </div>
-            <img class="products__item-picture" src="img/drill.jpg" width="620" height="270" alt="Дрели - соседям на радость">
+            <img class="slider__image" src="img/drill.jpg" width="620" height="270" alt="Дрели - соседям на радость">
           </div>
           <span class="slider__control slider__control--left">Предыдущий</span>
           <span class="slider__control slider__control--right">Следующий</span>
@@ -123,8 +123,8 @@
               <a href="#" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-2.jpg" width="200" height="175" alt="Перфоратор BOSH BFG 9000">
-            <h3 class="heading3 products__item-title">Перфоратор BOSH BFG 9000</h3>
-            <span class="products__item-price--strike">32500 Р.</span>
+            <h3 class="products__item-title">Перфоратор BOSH BFG 9000</h3>
+            <span class="products__item-price products__item-price--strike">32500 Р.</span>
             <span class="products__item-price">25500 Р.</span>
           </article>
           <article class="products__item">
@@ -133,8 +133,8 @@
               <a href="#" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-3.jpg" width="200" height="175" alt="Перфоратор BOSH BFG 3000">
-            <h3 class="heading3 products__item-title">Перфоратор BOSH BFG 3000</h3>
-            <span class="products__item-price--strike">22500 Р.</span>
+            <h3 class="products__item-title">Перфоратор BOSH BFG 3000</h3>
+            <span class="products__item-price products__item-price--strike">22500 Р.</span>
             <span class="products__item-price">15500 Р.</span>
           </article>
           <article class="products__item">
@@ -143,8 +143,8 @@
               <a href="#" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-4.jpg" width="200" height="175" alt="Перфоратор BOSH BFG 6000">
-            <h3 class="heading3 products__item-title">Перфоратор BOSH BFG 6000</h3>
-            <span class="products__item-price--strike">30500 Р.</span>
+            <h3 class="products__item-title">Перфоратор BOSH BFG 6000</h3>
+            <span class="products__item-price products__item-price--strike">30500 Р.</span>
             <span class="products__item-price">25500 Р.</span>
           </article>
           <article class="products__item">
@@ -154,7 +154,7 @@
               <a href="#" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-3.jpg" width="200" height="175" alt="Перфоратор BOSH BFG 2000">
-            <h3 class="heading3 products__item-title">Перфоратор BOSH BFG 2000</h3>
+            <h3 class="products__item-title">Перфоратор BOSH BFG 2000</h3>
             <span class="products__item-price">12500 Р.</span>
           </article>
         </section>
@@ -206,7 +206,7 @@
               <input class="service-block__menu-item" type="radio" id="service-delivery" name="services" checked>
               <label for="service-delivery">Доставка</label>
               <div class="service-block__item">
-                <h3 class="heading3 service-block__item-title">Доставка</h3>
+                <h3 class="service-block__item-title">Доставка</h3>
                 <p>
                   Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
@@ -217,7 +217,7 @@
               <input class="service-block__menu-item" type="radio" id="service-warranty" name="services">
               <label for="service-warranty">Гарантия</label>
               <div class="service-block__item">
-                <h3 class="heading3 service-block__item-title">Гарантия</h3>
+                <h3 class="service-block__item-title">Гарантия</h3>
                 <p>
                   Если купленный у нас товар поломается или заискрит,
                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
@@ -226,9 +226,9 @@
             </li>
             <li>
               <input class="service-block__menu-item" type="radio" id="service-credit" name="services">
-              <label for="service-credit">Гарантия</label>
+              <label for="service-credit">Кредит</label>
               <div class="service-block__item">
-                <h3 class="heading3 service-block__item-title">Кредит</h3>
+                <h3 class="service-block__item-title">Кредит</h3>
                 <p>
                   Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                   <a href="#" class="btn btn--uppercase">Отправить заявку</a>
