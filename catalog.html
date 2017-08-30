@@ -20,21 +20,23 @@
             Техномарт
           </a>
           <form action="/" class="form search" method="get">
-              <label for="search"><img="img/icon-search.svg" alt="Поиск"/></label>
+              <label class="search__label" for="search"><img src="img/icon-search.svg" alt="Поиск"/></label>
               <input id="search" type="text" class="search__input-field" placeholder="Поиск:">
               <button class="visually-hidden" type="submit">Отправить</button>
           </form>
-          <a href="#" class="bookmarks">Закладки: 0</a>
-          <a href="#" class="basket basket--not-empty">Корзина: 10</a>
-          <a href="#" class="btn btn--basket">Оформить заказ</a>
+          <div class="page-header__user-control">
+            <a href="#" class="btn btn--bookmarks">Закладки: 0</a>
+            <a href="#" class="btn btn--basket btn--not-empty">Корзина: 10</a>
+            <a href="#" class="btn btn--order">Оформить заказ</a>
+          </div>
         </div>
       </section>
 
       <!-- Блок с заголовком и контактами -->
       <section class="page-header__main wrapper">
-        <h2 class="heading2 site-name">
+        <p class="site-name">
           Интернет-магазин строительных материалов<br />и инструментов для ремонта
-        </h2>
+        </p>
         <div class="contact-block">
           <a href="tel:+78125550555" class="contact__phone">+7 (812) 555-05-55</a>
           <span class="contact__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
@@ -233,7 +235,7 @@
           </section>
 
           <ul class="pagination">
-            <li class="pagination__item--current"><a>1</a></li>
+            <li class="pagination__item pagination__item--current"><a>1</a></li>
             <li class="pagination__item"><a href="#">2</a></li>
             <li class="pagination__item"><a href="#">3</a></li>
             <li class="pagination__item"><a href="#">Следующая</a></li>
