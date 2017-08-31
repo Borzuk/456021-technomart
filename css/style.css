@@ -169,6 +169,13 @@ input[type="radio"].visually-hidden {
         background-position: 0 0;
         opacity: 0.3;
       }
+    .btn.btn--login:hover::before, .btn.btn--login:focus::before {
+      opacity: 1;
+    }
+
+    .btn.btn--login:active::before {
+      opacity: 0.3;
+    }
 
     .btn.btn--logout {}
     .btn.btn--registration {
@@ -260,20 +267,35 @@ input[type="radio"].visually-hidden {
 }
 
 .main-title {
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
   font-size: 30px;
   line-height: 30px;
-  color: #3d546e;
+  color: #32425c;
+  background-color: #f2f6f8;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
-  margin-top: 0;
+  font-weight: normal;
 }
 
 /*Метка "новинка"*/
 
 .label-new {
-  position: absolute;
-  right: 0;
-  top: 0;
   background-color: #ff5357;
+  color: #ffffff;
+  display: flex;
+  height: 26px;
+  place-content: center;
+  position: absolute;
+  right: -28px;
+  top: 10px;
+  width: 100px;
+  font-size: 16px;
+  line-height: 18px;
+  transform: rotate(45deg);
 }
 
 /*ПО СТРУКТУРЕ САЙТА*/
@@ -506,7 +528,7 @@ input[type="radio"].visually-hidden {
 
 /*Хлебные крошки*/
 .breadcumbs {
-  min-height: 60px;
+  min-height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -556,6 +578,7 @@ input[type="radio"].visually-hidden {
       padding: 20px;
       text-align: left;
       background-color: red;
+      overflow: hidden;
     }
 
     .slider {
@@ -657,6 +680,32 @@ input[type="radio"].visually-hidden {
     .promo-block__item.promo-block__item--color-lightorange {
       background-color: #ffc047;
     }
+    .promo-block__item.promo-block__item--item-material {
+      background-image: url('/img/icon-1.svg');
+      background-repeat: no-repeat;
+      background-position: 212px 35px;
+    }
+    .promo-block__item.promo-block__item--item-tool {
+      background-image: url('/img/icon-2.svg');
+      background-repeat: no-repeat;
+      background-position: 198px 35px;
+    }
+    .promo-block__item.promo-block__item--item-technuque {
+      background-image: url('/img/icon-3.svg');
+      background-repeat: no-repeat;
+      background-position: 193px 35px;
+    }
+    .promo-block__item.promo-block__item--item-discount {
+      background-image: url('/img/icon-4.svg');
+      background-repeat: no-repeat;
+      background-position: 195px 35px;
+    }
+    .promo-block__item.promo-block__item--item-delivery {
+      background-image: url('/img/icon-5.svg');
+      background-repeat: no-repeat;
+      background-position: 190px 35px;
+    }
+
 
 .heading-wrap {
   padding: 24px 25px;
@@ -694,12 +743,13 @@ input[type="radio"].visually-hidden {
       display: flex;
       position: relative;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       width: 220px;
       min-height: 320px;
       font-family: "PT Sans", "Arial", sans-serif;
       border: 1px solid #e5e5e5;
       flex-basis: 220px;
+      overflow: hidden;
     }
       .products__item:hover, .products__item:focus {
         border:none;
@@ -729,15 +779,37 @@ input[type="radio"].visually-hidden {
         font-weight: bold;
         color: #000000;
         text-align: center;
+        margin: 5px auto auto;
       }
       .products__item-price {
+        background-color: #ee3643;
+        border-radius: 2px;
+        color: #ffffff;
         font-size: 17px;
         font-weight: bold;
         line-height: 18px;
-        color: #ffffff;
-        background-color: #ee3643;
+        margin: 0 auto 20px;
+        min-height: 38px;
         text-align: center;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
       }
+
+        .products__item-price.products__item-price--arrow::after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          right: -18px;
+          top: 0;
+          border: 19px solid transparent;
+          border-left-color: #ee3643;
+          border-right: 0;
+        }
+
         .products__item-price.products__item-price--strike {
           font-size: 17px;
           font-weight: bold;
@@ -745,6 +817,8 @@ input[type="radio"].visually-hidden {
           color: #a9a9a9;
           text-decoration: line-through;
           text-align: center;
+          background-color: transparent;
+          margin: auto;
         }
 
 /*Популярные производители*/
