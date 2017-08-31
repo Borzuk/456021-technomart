@@ -201,43 +201,39 @@
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами!<br />Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <ul class="service-block__menu">
-            <li>
-              <input class="service-block__menu-item" type="radio" id="service-delivery" name="services" checked>
-              <label for="service-delivery">Доставка</label>
-              <div class="service-block__item">
+          <div class="service-wrap">
+            <input class="service-block__menu-item" type="radio" id="service-delivery_v2" name="services_v2" checked>
+            <input class="service-block__menu-item" type="radio" id="service-warranty_v2" name="services_v2">
+            <input class="service-block__menu-item" type="radio" id="service-credit_v2" name="services_v2">
+            <div class="service-block__menu">
+              <label for="service-delivery_v2">Доставка</label>
+              <label for="service-warranty_v2">Гарантия</label>
+              <label for="service-credit_v2">Кредит</label>
+            </div>
+              <div class="service-block__item block1">
                 <h3 class="service-block__item-title">Доставка</h3>
                 <p>
-                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br />
+                  Мы с удовольствием доставим ваш товар прямо
+                  к вашему подъезду совершенно бесплатно!<br />
                   Ведь мы неплохо заработаем,<br />
                   поднимая его на ваш этаж!
                 </p>
               </div>
-            </li>
-            <li>
-              <input class="service-block__menu-item" type="radio" id="service-warranty" name="services">
-              <label for="service-warranty">Гарантия</label>
-              <div class="service-block__item">
+              <div class="service-block__item block2">
                 <h3 class="service-block__item-title">Гарантия</h3>
                 <p>
                   Если купленный у нас товар поломается или заискрит,
                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
                 </p>
               </div>
-            </li>
-            <li>
-              <input class="service-block__menu-item" type="radio" id="service-credit" name="services">
-              <label for="service-credit">Кредит</label>
-              <div class="service-block__item">
+              <div class="service-block__item block3">
                 <h3 class="service-block__item-title">Кредит</h3>
                 <p>
                   Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                   <a href="#" class="btn btn--uppercase">Отправить заявку</a>
                 </p>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
       </section>
 
       <!-- Информация о компании и контакты -->
