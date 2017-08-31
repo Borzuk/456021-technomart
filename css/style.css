@@ -129,7 +129,18 @@ input[type="radio"].visually-hidden {
     }
 
     .user-block .btn {
-      padding: 12px 25px;
+      padding: 9px 25px;
+      color: #000000;
+      font-size: 21px;
+      line-height: 21px;
+      background-color: #ffffff;
+    }
+
+    .btn.btn--person {
+      padding: 9px 0;
+      padding-left: 45px;
+      padding-right: 5px;
+      margin-right: 15px;
       color: #000000;
       font-size: 21px;
       line-height: 21px;
@@ -137,7 +148,7 @@ input[type="radio"].visually-hidden {
     }
 
     .btn.btn--login {
-      padding-left: 50px;
+      padding-left: 46px;
     }
       .btn.btn--login:hover, .btn.btn--login:focus {
         color: #ee3643;
@@ -145,6 +156,20 @@ input[type="radio"].visually-hidden {
       .btn.btn--login:active, .btn.btn--login:active {
         color: rgba(0, 0, 0, 0.3);
       }
+
+      .btn.btn--login::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 12px;
+        left: 10px;
+        background-image: url('/img/icon-login.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        opacity: 0.3;
+      }
+
     .btn.btn--logout {}
     .btn.btn--registration {
       width: 150px;
@@ -159,6 +184,19 @@ input[type="radio"].visually-hidden {
     font-size: 17px;
   }
 
+  .btn.user-block__person::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 0;
+    background-image: url('/img/icon-user.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+  }
+
   .btn.btn--bookmarks {
     padding-left: 35px;
     padding-right: 35px;
@@ -170,7 +208,6 @@ input[type="radio"].visually-hidden {
       position: absolute;
       height: 16px;
       width: 16px;
-      height: 16px;
       top: 12px;
       left: 10px;
       background-image: url('/img/icon-bookmark.svg');
@@ -323,7 +360,7 @@ input[type="radio"].visually-hidden {
   /*Блок с заголовком и контактами*/
   .page-header__main {
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 48px;
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
@@ -344,6 +381,7 @@ input[type="radio"].visually-hidden {
       flex-direction: column;
     }
       .contact__phone {
+        position: relative;
         color: #fb463c;
         width: 265px;
         min-height: 46px;
@@ -355,6 +393,19 @@ input[type="radio"].visually-hidden {
         padding-left: 65px;
         padding-right: 45px;
       }
+
+      .contact__phone::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 12px;
+        left: 10px;
+        background-image: url('/img/icon-phone.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+
       .contact__address {
         color: #3d546e;
         font-size: 14px;
@@ -369,8 +420,23 @@ input[type="radio"].visually-hidden {
       .user-block.user-block--person {
         flex-direction: column;
       }
+      .user-block__button-logout span{
+        display: inline-block;
+        font-size: 0px;
+        width: 20px;
+        height: 20px;
+        background-image: url('/img/icon-logout.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
 
       .user-block__wrap {
+        padding-top: 3px;
+        padding-right: 5px;
+        padding-bottom: 3px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
         width: 300px;
         min-height: 45px;
         background-color: #ffffff;
@@ -396,7 +462,7 @@ input[type="radio"].visually-hidden {
   }
     .main-menu__list {
       margin: 0;
-      padding: 0;
+      padding: 0 23px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -406,9 +472,10 @@ input[type="radio"].visually-hidden {
         min-width: 100px;
         min-height: 55px;
         line-height: 17px;
-        padding: 19px 33px;
+        padding: 18px 30px;
         text-align: center;
       }
+
         .main-menu__item:hover, .main-menu__item:focus {
           background-color: #293449;
         }
