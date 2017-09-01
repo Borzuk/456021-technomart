@@ -88,11 +88,12 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: inline-block;
   min-height: 38px;
+  min-width: 150px;
   color: #ffffff;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  padding: 10px 5px;
+  padding: 5px 5px;
   text-align: center;
   vertical-align: top;
   background-color: #ee3643;
@@ -148,7 +149,10 @@ input[type="radio"].visually-hidden {
     }
 
     .btn.btn--login {
-      padding-left: 46px;
+      min-width: 120px;
+      padding-left: 35px;
+      padding-right: 14px;
+      margin-right: 10px;
     }
       .btn.btn--login:hover, .btn.btn--login:focus {
         color: #ee3643;
@@ -180,15 +184,21 @@ input[type="radio"].visually-hidden {
     .btn.btn--logout {}
     .btn.btn--registration {
       width: 150px;
-      min-height: 45px;
     }
       .btn.btn--registration:hover, .btn.btn--registration:focus {
         color: #ee3643;
       }
 
   .page-header__user-control .btn {
-    padding: 12px 20px;
+    padding: 12px 10px;
     font-size: 17px;
+  }
+
+  .btn.user-block__person {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 38px;
+    padding-right: 5px;
   }
 
   .btn.user-block__person::before {
@@ -196,8 +206,8 @@ input[type="radio"].visually-hidden {
     position: absolute;
     height: 20px;
     width: 20px;
-    top: 10px;
-    left: 0;
+    top: 6px;
+    left: 4px;
     background-image: url('../img/icon-user.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -206,7 +216,7 @@ input[type="radio"].visually-hidden {
 
   .btn.btn--bookmarks {
     padding-left: 35px;
-    padding-right: 35px;
+    padding-right: 22px;
     background-color: transparent;
   }
 
@@ -216,7 +226,7 @@ input[type="radio"].visually-hidden {
       height: 16px;
       width: 16px;
       top: 12px;
-      left: 10px;
+      left: 16px;
       background-image: url('../img/icon-bookmark.svg');
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -224,8 +234,8 @@ input[type="radio"].visually-hidden {
     }
 
   .btn.btn--basket {
-    padding-left: 42px;
-    padding-right: 32px;
+    padding-left: 30px;
+    padding-right: 8px;
     background-color: transparent;
   }
 
@@ -236,7 +246,7 @@ input[type="radio"].visually-hidden {
       width: 16px;
       height: 16px;
       top: 12px;
-      left: 10px;
+      left: 16px;
       background-image: url('../img/icon-cart.svg');
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -344,16 +354,16 @@ input[type="radio"].visually-hidden {
         margin-right: auto;
       }
         .search__label {
-          padding-left: 9px;
+          padding-left: 17px;
           position: absolute;
           top: 12px;
           opacity: 0.3;
         }
 
         .search__input-field {
-          width: 235px;
+          width: 230px;
           min-height: 42px;
-          margin-left: 30px;
+          margin-left: 38px;
           padding: 10px;
           color: #ffffff;
           background-color: #293449;
@@ -381,7 +391,7 @@ input[type="radio"].visually-hidden {
 
   /*Блок с заголовком и контактами*/
   .page-header__main {
-    padding-left: 50px;
+    padding-left: 51px;
     padding-top: 48px;
     align-items: flex-start;
     display: flex;
@@ -421,7 +431,7 @@ input[type="radio"].visually-hidden {
         position: absolute;
         height: 20px;
         width: 20px;
-        top: 12px;
+        top: 8px;
         left: 10px;
         background-image: url('../img/icon-phone.svg');
         background-repeat: no-repeat;
@@ -436,7 +446,9 @@ input[type="radio"].visually-hidden {
     .user-block {
       display: flex;
       min-width: 280px;
+      min-height: 68px;
       justify-content: space-between;
+      align-items: flex-start;
       text-align: center;
     }
       .user-block.user-block--person {
@@ -453,18 +465,19 @@ input[type="radio"].visually-hidden {
       }
 
       .user-block__wrap {
-        padding-top: 3px;
-        padding-right: 5px;
-        padding-bottom: 3px;
-        padding-left: 15px;
+        padding: 0 10px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 300px;
         min-height: 45px;
         background-color: #ffffff;
       }
-      .user-block__button-logout {}
+      .user-block__button-logout {
+        margin-top: -5px;
+      }
       .user-block__inner-control {
+        margin-left: 20px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -512,9 +525,12 @@ input[type="radio"].visually-hidden {
       .main-menu__item {
         display: inline-block;
         min-width: 100px;
-        min-height: 55px;
+        min-height: 54px;
         line-height: 17px;
-        padding: 18px 30px;
+        padding-top: 20px;
+        padding-bottom: 16px;
+        padding-left: 30px;
+        padding-right: 30px;
         text-align: center;
       }
 
