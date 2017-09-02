@@ -118,6 +118,8 @@ input[type="radio"].visually-hidden {
   }
 
   .btn.btn--buy {
+    min-width: 135px;
+    min-height: 35px;
     color: #ffffff;
     background-color: #63a63e;
     text-transform: uppercase;
@@ -294,17 +296,20 @@ input[type="radio"].visually-hidden {
 /*Метка "новинка"*/
 
 .label-new {
+  display: block;
+  height: 28px;
+  width: 100px;
+  padding-right: 6px;
+  padding-top: 3px;
+  position: absolute;
+  right: -31px;
+  top: 9px;
   background-color: #ff5357;
   color: #ffffff;
-  display: flex;
-  height: 26px;
-  place-content: center;
-  position: absolute;
-  right: -30px;
-  top: 9px;
-  width: 100px;
+  font-family: "PT Sans Narrow","Arial",sans-serif;
   font-size: 16px;
   line-height: 18px;
+  text-align: center;
   transform: rotate(45deg);
 }
 
@@ -727,7 +732,7 @@ input[type="radio"].visually-hidden {
 
 
 .heading-wrap {
-  padding: 24px 25px;
+  padding: 24px 27px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -777,9 +782,10 @@ input[type="radio"].visually-hidden {
 
       .products__control {
         margin: auto;
+        min-width: 135px;
         position: absolute;
-        top: 0;
-        left: calc(50% - 35px);
+        top: 45px;
+        left: calc(50% - 67px);
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -792,13 +798,14 @@ input[type="radio"].visually-hidden {
         }
       .products__item-picture {}
       .products__item-title {
+        margin: 5px auto auto;
+        padding: 0 25px;
+        text-align: center;
         font-family: "PT Sans", "Arial", sans-serif;
         font-size: 18px;
         line-height: 20px;
         font-weight: bold;
         color: #000000;
-        text-align: center;
-        margin: 5px auto auto;
       }
       .products__item-price {
         background-color: #ee3643;
@@ -1011,7 +1018,11 @@ input[type="radio"].visually-hidden {
     }
     .contacts-block .btn {
       width: 300px;
-      margin-top:52px;
+      margin-top: 33px;
+    }
+
+    .contacts-block p{
+      margin-bottom: 33px;
     }
 
 /*Подвал*/
@@ -1024,7 +1035,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 .footer-row:not(:first-child) {
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
   .footer .logo {
@@ -1062,6 +1073,7 @@ input[type="radio"].visually-hidden {
     .contacts {
       color: #ffffff;
       margin-right: auto;
+      padding-left: 2px;
     }
       .contacts a{
         color: #ffffff;
