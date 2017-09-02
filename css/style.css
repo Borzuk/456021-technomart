@@ -120,6 +120,8 @@ input[type="radio"].visually-hidden {
   .btn.btn--buy {
     min-width: 135px;
     min-height: 35px;
+    margin-bottom: 12px;
+    padding: 9px 5px;
     color: #ffffff;
     background-color: #63a63e;
     text-transform: uppercase;
@@ -791,6 +793,9 @@ input[type="radio"].visually-hidden {
         text-align: center;
       }
         .products__control-bookmark {
+          min-width: 130px;
+          min-height: 35px;
+          padding: 9px 5px;
           color: #000000;
           background-color: #ffffff;
           text-transform: uppercase;
