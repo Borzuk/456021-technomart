@@ -781,18 +781,23 @@ input[type="radio"].visually-hidden {
         border:none;
         box-shadow: 0px 10px 25px 0px #293449;
       }
-
       .products__control {
+        display: none;
         margin: auto;
         min-width: 135px;
         position: absolute;
         top: 45px;
         left: calc(50% - 67px);
-        display: flex;
         flex-direction: column;
         text-align: center;
       }
-        .products__control-bookmark {
+      .products__item:hover > .products__control, .products__item:focus > .products__control {
+        display: flex;
+      }
+      .products__item:hover > .products__item-picture, .products__item:focus > .products__item-picture {
+        visibility: hidden;
+      }
+        .products__control-bookmark, .products__control-bookmark:visited{
           min-width: 130px;
           min-height: 35px;
           padding: 9px 5px;
@@ -801,6 +806,13 @@ input[type="radio"].visually-hidden {
           text-transform: uppercase;
           border: 2px solid #63a63e;
         }
+        .products__control-bookmark:hover, .products__control-bookmark:focus {
+          border: 2px solid #000000;
+        }
+        .products__control-bookmark:active {
+          opacity: 0.3;
+        }
+
       .products__item-picture {}
       .products__item-title {
         margin: 5px auto auto;
@@ -947,12 +959,26 @@ input[type="radio"].visually-hidden {
       margin-top:30px;
     }
 
+
     #service-delivery_v2:checked ~ .service-block__menu label[for="service-delivery_v2"],
     #service-warranty_v2:checked ~ .service-block__menu label[for="service-warranty_v2"],
     #service-credit_v2:checked ~ .service-block__menu label[for="service-credit_v2"]{
       background-color: #ffffff;
       color: #3d546e;
       box-shadow: none;
+    }
+
+    #service-delivery_v2:hover ~ .service-block__menu label[for="service-delivery_v2"],
+    #service-warranty_v2:hover ~ .service-block__menu label[for="service-warranty_v2"],
+    #service-credit_v2:hover ~ .service-block__menu label[for="service-credit_v2"],
+    #service-delivery_v2:focus ~ .service-block__menu label[for="service-delivery_v2"],
+    #service-warranty_v2:focus ~ .service-block__menu label[for="service-warranty_v2"],
+    #service-credit_v2:focus ~ .service-block__menu label[for="service-credit_v2"]{
+      background-color: #293449;
+      color: #ffffff;
+      box-shadow:
+        inset 0 1px 0 0 #405069,
+        0 1px 0 0 #293449;
     }
 
 .service-block__item {
@@ -1165,10 +1191,79 @@ input[type="radio"].visually-hidden {
       .filter__form fieldset {
         border: none;
       }
+      .filter__form div.fieldset-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .filter__form div.fieldset-row:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      .filter__form fieldset:not(:last-of-type) {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 15px;
+      }
         .filter__form legend {
+          padding: 20px 0;
           font-size: 17px;
           line-height: 30px;
           text-transform: uppercase;
+          font-weight: bold;
+        }
+        .filter__form label {
+          position: relative;
+          display: block;
+          margin-left: 25px;
+          margin-bottom: 14px;
+          font-size: 15px;
+          line-height: 20px;
+          text-transform: uppercase;
+        }
+        .range-fieldset #price-min, .range-fieldset #price-max {
+          background-color: #f7f3ec;
+          border: none;
+          width: 95px;
+          height: 35px;
+          text-align: center;
+          padding: 3px;
+        }
+
+        div.range-wrap {
+          width: 220px;
+          height: 80px;
+          background-color: #f7f3ec;
+        }
+
+        .checkbox-fieldset label::before {
+          content: "";
+          display: block;
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          left: -25px;
+          border: 2px solid #c5c5c5;
+        }
+        .radio-fieldset label::before{
+          content: "";
+          display: block;
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          left: -25px;
+          border-radius: 50%;
+          border: 2px solid #c5c5c5;
+        }
+
+        .btn.btn--filter {
+          background-color: #ffffff;
+          color: #000000;
+          text-transform: uppercase;
+          font-size: 13px;
+          border: 1px solid #e5e5e5;
         }
   .catalog__main {
     max-width: 700px;

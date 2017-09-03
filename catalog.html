@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -84,18 +84,22 @@
           <span class="filter__title">Фильтр:</span>
           <form class="filter__form" method="get" action="/">
             <!-- Заготовка для будущего фильтра цен с диапазоном -->
-            <fieldset>
+            <fieldset class="range-fieldset">
               <legend>Цена:</legend>
-              <div></div>
-              <input type="text" name="price" value="">
-              <label for="price-min" class="visually-hidden">Минимальная цена</label>
-              <input id="price-min" type="text" name="price-min" value="0">
-              &mdash;
-              <label for="price-max" class="visually-hidden">Максимальная цена</label>
-              <input id="price-max" type="text" name="price-max" value="30000">
+              <div class="fieldset-row">
+                <div class="range-wrap"></div>
+                <input class="visually-hidden" type="text" name="price" value="">
+              </div>
+              <div class="fieldset-row">
+                <label for="price-min" class="visually-hidden">Минимальная цена</label>
+                <input id="price-min" type="text" name="price-min" value="0">
+                &mdash;
+                <label for="price-max" class="visually-hidden">Максимальная цена</label>
+                <input id="price-max" type="text" name="price-max" value="30000">
+              </div>
             </fieldset>
             <!-- КОНЕЦ заготовки для цен с диапазоном -->
-            <fieldset>
+            <fieldset  class="checkbox-fieldset">
               <legend>Производители:</legend>
               <label>
                 <input class="visually-hidden" type="checkbox" name="bosh" value="bosh" checked>
@@ -106,19 +110,19 @@
                 Интерскол
               </label>
               <label>
-                <input class="visually-hiden" type="checkbox" name="makita" value="makita" checked>
+                <input class="visually-hidden" type="checkbox" name="makita" value="makita" checked>
                 Makita
               </label>
               <label>
-                <input class="visually-hiden" type="checkbox" name="dewalt" value="dewalt">
+                <input class="visually-hidden" type="checkbox" name="dewalt" value="dewalt">
                 DeWal
               </label>
               <label>
-                <input class="visually-hiden" type="checkbox" name="hitachi" value="hitachi">
+                <input class="visually-hidden" type="checkbox" name="hitachi" value="hitachi">
                 Hitachi
               </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="radio-fieldset">
               <legend>Питание:</legend>
               <label>
                 <input class="visually-hidden" type="radio" name="power-supply" value="battery">
@@ -129,7 +133,7 @@
                 Сетевые
               </label>
             </fieldset>
-            <button type="button" name="filter__submit">Показать</button>
+            <button class="btn btn--filter" type="button" name="filter__submit">Показать</button>
           </form>
         </section>
 
