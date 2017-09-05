@@ -897,7 +897,15 @@ input[type="radio"].visually-hidden {
         box-shadow: 0px 10px 25px 0px #293449;
       }
 
-      .popular-manufacturers__item-picture {}
+      .popular-manufacturers__item:active{
+        border:none;
+        box-shadow: 0px 10px 25px 0px #293449;
+        opacity: 0.5;
+      }
+
+      .popular-manufacturers__item:active > .popular-manufacturers__item-picture{
+        opacity: 0.3;
+      }
 
 
 /*Сервисный блок*/
@@ -923,6 +931,7 @@ input[type="radio"].visually-hidden {
 
     .service-block__item-title {
       margin-top:0;
+      margin-bottom: 30px;
       font-family: "Cuprum","Arial",sans-serif;
       font-weight: normal;
       font-size: 36px;
@@ -985,6 +994,36 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
+  .service-block__item p {
+    padding-top: 0;
+    width: 280px;
+  }
+
+
+  .service-block__item.block1 {
+    background-image: url("../img/delivery.svg");
+    background-position: 152px 21px;
+    background-repeat: no-repeat;
+    height: 261px;
+    width: 651px;
+  }
+
+  .service-block__item.block2 {
+    background-image: url("../img/warranty.svg");
+    background-position: 152px 21px;
+    background-repeat: no-repeat;
+    height: 261px;
+    width: 651px;
+  }
+
+  .service-block__item.block3 {
+    background-image: url("../img/credit.svg");
+    background-position: 152px 21px;
+    background-repeat: no-repeat;
+    height: 261px;
+    width: 651px;
+  }
+
 #service-delivery_v2:checked ~ .block1,
 #service-warranty_v2:checked ~ .block2,
 #service-credit_v2:checked ~ .block3 {
@@ -1005,7 +1044,7 @@ input[type="radio"].visually-hidden {
 /*Информация о компании и контакты*/
 .two-columns-wrapper {
   display: flex;
-  margin-top: 105px;
+  margin-top: 25px;
 }
   .information-block {
     margin-right: 115px;
@@ -1147,16 +1186,39 @@ input[type="radio"].visually-hidden {
     .copyright {
       width: 230px;
     }
-    .social {}
-      .social__link {}
+    .social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 160px;
+      margin-right: auto;
+      width: 130px;
+    }
+      .social__link {
+        align-items: center;
+        background-color: #29384a;
+        border: 1px solid #29384a;
+        border-radius: 50%;
+        display: inline-flex;
+        height: 41px;
+        justify-content: center;
+        width: 41px;
+      }
         .social__link:hover, .social__link:focus, .social__link:active {
           background-color: #ee3643;
         }
         .social__link.social__link--vk {}
         .social__link.social__link--fb {}
         .social__link.social__link--insta {}
-    .feedback {}
-    .authors {}
+    .feedback {
+      width: 160px;
+      padding: 0 10px;
+    }
+    .authors {
+      padding: 0 10px;
+      padding-left: 40px;
+      width: 150px;
+    }
     .feedback a, .authors a {
       display: block;
       color: #ffda96;
@@ -1164,7 +1226,7 @@ input[type="radio"].visually-hidden {
       .feedback a:hover, .feedback a:focus, .authors a:hover, .authors a:focus {
         text-decoration: underline;
       }
-      .feedback a:active, .authors:active {
+      .feedback a:active, .authors a:active {
         text-decoration: none;
         color: #ee3643;
       }
