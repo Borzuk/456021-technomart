@@ -110,7 +110,7 @@ input[type="radio"].visually-hidden {
   }
 
   .btn:visited {
-    background-color: #ff5357;
+    background-color: none;
   }
 
   .btn.btn--uppercase {
@@ -257,16 +257,29 @@ input[type="radio"].visually-hidden {
       opacity: 0.3;
     }
 
-    .btn.btn--bookmarks:hover::before, .btn.btn--basket:hover::before {
+    .btn.btn--bookmarks:hover::before,
+    .btn.btn--bookmarks:focus::before,
+    .btn.btn--basket:hover::before,
+    .btn.btn--basket:focus::before  {
       opacity: 1;
     }
-    .btn.btn--bookmarks:active, .btn.btn--basket:active,
-    .btn.btn--bookmarks:active::before, .btn.btn--basket:active::before {
+    .btn.btn--bookmarks:active,
+    .btn.btn--basket:active,
+    .btn.btn--bookmarks:active::before,
+    .btn.btn--basket:active::before {
       opacity: 0.6;
     }
 
   .btn.btn--order {
     background-color: #63a63e;
+  }
+
+  .btn.btn--order:hover, .btn.btn--order:focus {
+    background-color: #5fbb2d;
+  }
+
+  .btn.btn--order:active {
+    background-color: #518534;
   }
 
 .btn.btn--not-empty {
@@ -353,6 +366,9 @@ input[type="radio"].visually-hidden {
         margin-right: auto;
       }
 
+        .logo:hover, .logo:focus {
+          background-color: #ca2c37;
+        }
         .logo:active {
           background-color: #ba2732;
         }
@@ -379,8 +395,12 @@ input[type="radio"].visually-hidden {
           font-size: 17px;
           line-height: 18px;
         }
-          .search__input-field:hover .search__label {
+          .form.search:hover .search__label {
             opacity: 1;
+          }
+
+          .form.search:focus .search__label path{
+            fill: #ee3643;
           }
 
           .search__input-field:focus {
@@ -804,7 +824,7 @@ input[type="radio"].visually-hidden {
       overflow: hidden;
     }
       .products__item:hover, .products__item:focus {
-        border:none;
+        border: 1px solid transparent;
         box-shadow: 0px 10px 25px 0px #293449;
       }
       .products__control {
@@ -1051,9 +1071,9 @@ input[type="radio"].visually-hidden {
     width: 651px;
   }
 
-#service-delivery_v2:checked ~ .block1,
-#service-warranty_v2:checked ~ .block2,
-#service-credit_v2:checked ~ .block3 {
+#service-delivery_v2:checked ~ .block1, #service-delivery_v2:focus ~ .block1,
+#service-warranty_v2:checked ~ .block2, #service-warranty_v2:focus ~ .block2,
+#service-credit_v2:checked ~ .block3, #service-credit_v2:focus ~ .block3 {
   display: block;
 }
 
