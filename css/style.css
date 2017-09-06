@@ -560,12 +560,38 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
   .breadcumbs__item {
+    position: relative;
     line-height: 18px;
     padding-right: 50px;
   }
     .breadcumbs__item a {
+      position: relative;
       color: #000000;
       text-transform: uppercase;
+    }
+
+    .breadcumbs__item:first-of-type a::before {
+      content: "";
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      top: 5px;
+      left: -2px;
+      background-image: url('../img/icon-home.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    .breadcumbs__item:not(:first-of-type)::before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      top: 4px;
+      left: -30px;
+      border-bottom: 1px solid #c5c9d1;
+      border-right: 1px solid #c5c9d1;
+      transform: rotate(-45deg);
     }
 
 /*Блок с картинками и кнопками*/
@@ -1005,7 +1031,7 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/delivery.svg");
     background-position: 152px 21px;
     background-repeat: no-repeat;
-    height: 261px;
+    min-height: 260px;
     width: 651px;
   }
 
