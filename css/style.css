@@ -1398,19 +1398,62 @@ input[type="radio"].visually-hidden {
           text-transform: uppercase;
         }
         .range-fieldset #price-min, .range-fieldset #price-max {
-          background-color: #f7f3ec;
-          border: none;
           width: 95px;
           height: 35px;
-          text-align: center;
           padding: 3px;
+          background-color: #f7f3ec;
+          border: none;
+          font-family: "PT Sans";
+          font-size: 17px;
+          text-align: center;
         }
 
-        div.range-wrap {
+        .range-wrap {
           width: 220px;
           height: 80px;
+          padding: 0 20px;
+          padding-top: 40px;
+          position: relative;
           background-color: #f7f3ec;
         }
+          .range-control {
+            position: relative;
+          }
+
+          .range-control .scale {
+            height: 2px;
+            background-color: #d7dcde;
+          }
+
+          .range-control .bar {
+            width: 80%;
+            height: 2px;
+            background-color: #00ca74;
+          }
+
+          .range-toggle {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -9px;
+            background: #ababab;
+            border: 8px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+            cursor: pointer;
+          }
+
+          .range-toggle:hover {
+            background: #1c4f80;
+          }
+
+          .range-toggle-min {
+            left: 0;
+          }
+
+          .range-toggle-max {
+            left: 80%;
+          }
 
         .range-fieldset {
           padding-bottom: 29px;
