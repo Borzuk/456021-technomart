@@ -19,6 +19,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  min-width: 940px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -483,6 +484,19 @@ input[type="radio"].visually-hidden {
         flex-direction: column;
         justify-content: space-around;
       }
+
+      .user-block.user-block--person:hover .btn.user-block__person::before,
+      .user-block.user-block--person:focus .btn.user-block__person::before,
+      .user-block.user-block--person:hover .user-block__button-logout span,
+      .user-block.user-block--person:focus .user-block__button-logout span {
+        opacity: 1;
+      }
+
+      .user-block.user-block--person:hover user-block__inner-control a,
+      .user-block.user-block--person:focus user-block__inner-control a {
+        color: #ee3643;
+      }
+
       .user-block__button-logout span{
         display: inline-block;
         font-size: 0px;
@@ -491,6 +505,7 @@ input[type="radio"].visually-hidden {
         background-image: url('../img/icon-logout.svg');
         background-repeat: no-repeat;
         background-position: 0 0;
+        opacity: 0.3;
       }
 
       .user-block__wrap {
@@ -872,15 +887,14 @@ input[type="radio"].visually-hidden {
       }
       .products__item-price {
         background-color: #ee3643;
-        border-radius: 2px;
         color: #ffffff;
         font-size: 17px;
         font-weight: bold;
         line-height: 18px;
-        margin: 0 auto 20px;
+        margin: 0 auto 22px;
         min-height: 38px;
         text-align: center;
-        width: 130px;
+        width: 110px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -892,11 +906,21 @@ input[type="radio"].visually-hidden {
           width: 0;
           height: 0;
           position: absolute;
-          right: -18px;
+          right: -19px;
           top: 0;
           border: 19px solid transparent;
           border-left-color: #ee3643;
           border-right: 0;
+        }
+        .products__item-price.products__item-price--arrow::before {
+          content: "";
+          height: 38px;
+          width: 15px;
+          position: absolute;
+          top: 0;
+          left: -13px;
+          background-color: #ee3643;
+          border-radius: 2px;
         }
 
         .products__item-price.products__item-price--strike {
@@ -974,6 +998,19 @@ input[type="radio"].visually-hidden {
 .service-block__menu {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.service-block__menu::after {
+  content: "";
+  height: 280px;
+  width: 10px;
+  position: absolute;
+  top: -49px;
+  left: 230px;
+  background-image: url('../img/service-shadow.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
     .service-block__item-title {
