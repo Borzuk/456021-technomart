@@ -518,7 +518,7 @@ input[type="radio"].visually-hidden {
       }
 
       .user-block__wrap {
-        padding: 0 10px;
+        padding: 2px 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -597,8 +597,7 @@ input[type="radio"].visually-hidden {
 
 /*Хлебные крошки*/
 .breadcumbs {
-  min-height: 50px;
-  margin-top: 5px;
+  padding: 20px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
