@@ -563,7 +563,7 @@ input[type="radio"].visually-hidden {
   .main-menu {
     min-height: 55px;
     margin-top: 40px;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
     font-size: 17px;
     line-height: 17px;
     color: #ffffff;
@@ -646,7 +646,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 54px;
+  margin-top: 59px;
 }
   .promo-block__item {
     position: relative;
