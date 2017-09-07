@@ -12,6 +12,12 @@
   box-sizing: inherit;
 }
 
+*:visited {
+  color: inherit;
+  opacity: inherit;
+  background-color: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -108,10 +114,6 @@ input[type="radio"].visually-hidden {
 
   .btn:active {
     background-color: #ba2732;
-  }
-
-  .btn:visited {
-    background-color: none;
   }
 
   .btn.btn--uppercase {
@@ -485,16 +487,25 @@ input[type="radio"].visually-hidden {
         justify-content: space-around;
       }
 
-      .user-block.user-block--person:hover .btn.user-block__person::before,
-      .user-block.user-block--person:focus .btn.user-block__person::before,
-      .user-block.user-block--person:hover .user-block__button-logout span,
-      .user-block.user-block--person:focus .user-block__button-logout span {
+      .user-block__wrap:hover .btn.user-block__person::before,
+      .user-block__wrap:focus .btn.user-block__person::before,
+      .user-block__wrap:hover .user-block__button-logout span,
+      .user-block__wrap:focus .user-block__button-logout span {
         opacity: 1;
       }
 
-      .user-block.user-block--person:hover user-block__inner-control a,
-      .user-block.user-block--person:focus user-block__inner-control a {
+      .user-block__wrap:active .btn.user-block__person,
+      .user-block__wrap:active .user-block__button-logout span {
+        opacity: 0.3;
+      }
+
+      .user-block__inner-control a:hover,
+      .user-block__inner-control a:focus {
         color: #ee3643;
+      }
+      .user-block__inner-control a:active {
+        color: #32425c;
+        opacity: 0.3;
       }
 
       .user-block__button-logout span{
