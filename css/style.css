@@ -1816,10 +1816,11 @@ input[type="radio"].visually-hidden {
   display: none;
   margin: 0px auto;
   position: absolute;
-  top:20vh;
+  top:10vh;
 }
 
   .modal.modal--write-us {
+    position: fixed;
     width: 620px;
     min-height: 425px;
     left: calc(50vw - 310px);
@@ -1831,6 +1832,7 @@ input[type="radio"].visually-hidden {
   }
 
   .modal.modal--map {
+    position: fixed;
     width: 940px;
     height: 450px;
     left: calc(50vw - 470px);
@@ -1839,7 +1841,7 @@ input[type="radio"].visually-hidden {
   }
 
   .modal.modal--cart {
-    display: block;
+    position: fixed;
     width: 620px;
     min-height: 275px;
     left: calc(50vw - 310px);
