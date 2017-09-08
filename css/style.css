@@ -818,6 +818,31 @@ input[type="radio"].visually-hidden {
               width: 195px;
             }
 
+            .slider__control.slider__control--radio {
+              position:absolute;
+              bottom:37px;
+              left:50%;
+              width:200px;
+              height:10px;
+              margin-left:-100px;
+              text-align:center;
+              z-index:1000;
+            }
+            .slider__control.slider__control--radio i{
+              display:inline-block;
+              width:12px;
+              height:12px;
+              margin:0 4px;
+              background:white;
+              border:3px solid white;
+              vertical-align:top;
+              border-radius:50%;
+              cursor:pointer;
+            }
+            .slider__control.slider__control--radio i.active{
+              background:#ee3643;
+            }
+
         .slider__image {}
     .promo-block__column-1 {
       display: -webkit-box;

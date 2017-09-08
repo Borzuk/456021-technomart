@@ -1,3 +1,5 @@
+// Попапы главной
+
 var link = document.querySelector(".btn__write-us");
 var mapLink = document.querySelector(".open-map");
 
@@ -42,4 +44,30 @@ window.addEventListener("keydown", function (evt) {
       popup.classList.remove("modal--show");
     }
   }
+});
+
+// Слайдер на главной
+
+var slides = document.querySelectorAll('.slider__item');
+var slidesControl = document.querySelectorAll('.slider__control--radio i');
+var arrLeft = document.querySelector(".slider__control--left");
+var arrRight = document.querySelector(".slider__control--right");
+var currentSlide = 0;
+
+arrLeft.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  slides[currentSlide].classList.toggle("visually-hidden");
+  slidesControl[currentSlide].classList.toggle("active");
+  currentSlide = (currentSlide-1+slides.length)%slides.length;
+  slides[currentSlide].classList.toggle("visually-hidden");
+  slidesControl[currentSlide].classList.toggle("active");
+});
+
+arrRight.addEventListener("click", function (evt) {
+   evt.preventDefault();
+   slides[currentSlide].classList.toggle("visually-hidden");
+   slidesControl[currentSlide].classList.toggle("active");
+   currentSlide = (currentSlide+1+slides.length)%slides.length;
+   slides[currentSlide].classList.toggle("visually-hidden");
+   slidesControl[currentSlide].classList.toggle("active");
 });
