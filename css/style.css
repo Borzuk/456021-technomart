@@ -1826,9 +1826,10 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     border: 1px solid #000000;
     border-top: 5px solid #ff5257;
-    -webkit-box-shadow: 20px 0 40px 0 rgba(0, 0, 0, 0.25);
-            box-shadow: 20px 0 40px 0 rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   }
+
   .modal.modal--map {
     width: 940px;
     height: 450px;
@@ -1836,7 +1837,18 @@ input[type="radio"].visually-hidden {
     -webkit-box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
             box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
   }
-    .map {}
+
+  .modal.modal--cart {
+    display: block;
+    width: 620px;
+    min-height: 275px;
+    left: calc(50vw - 310px);
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-top: 5px solid #ff5257;
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  }
 
 /*Формы*/
 .form {
@@ -1845,8 +1857,34 @@ input[type="radio"].visually-hidden {
 
 .modal-close {
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 10px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 22px;
+  height: 4px;
+  background-color: #ee3643;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 
   .write-us {
@@ -1864,7 +1902,7 @@ input[type="radio"].visually-hidden {
     padding-top: 45px;
   }
 
-  .write-us .wrapper {
+  .modal .wrapper {
     width: 460px;
     margin: 0 auto;
     display: -webkit-box;
@@ -1877,10 +1915,32 @@ input[type="radio"].visually-hidden {
             justify-content: space-between;
   }
 
-  .write-us .wrapper-submit {
+  .modal .wrapper-submit {
+    padding: 37px 0;
     width: 100%;
     background-color: #f4f4f4;
     text-align: center;
+  }
+  .modal__message {
+    position: relative;
+    margin: auto;
+    padding: 70px 0;
+    padding-left: 70px;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 30px;
+    line-height: 18px;
+  }
+  .modal__message.modal__message--green::before {
+    display: block;
+    content: "";
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    left: -33px;
+    top: 48px;
+    background-image: url('../img/icon-submit.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 
   .write-us label {
@@ -1895,8 +1955,11 @@ input[type="radio"].visually-hidden {
     width: 220px;
     min-height: 38px;
     padding: 10px 15px;
+    margin-top: 12px;
     font-size: 13px;
     line-height: 18px;
+    color: #a9a9a9;
+    border: 2px solid #dee3e4;
   }
 
   .write-us textarea {
@@ -1904,11 +1967,29 @@ input[type="radio"].visually-hidden {
     width: 460px;
     min-height: 114px;
     padding: 10px 15px;
+    margin-top: 12px;
     font-size: 13px;
     line-height: 18px;
+    color: #a9a9a9;
+    border: 2px solid #dee3e4;
+  }
+
+  .write-us input[type="text"]:focus,
+  .write-us textarea:focus {
+    color: #000000;
+    border: 2px solid #cccccc;
   }
 
   .write-us__submit {
     width: 460px;
-    margin: 37px auto;
+    margin: 0 auto;
+  }
+
+  .btn.btn--cart {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .modal.modal--show {
+    display: block;
   }
