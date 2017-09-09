@@ -1612,6 +1612,7 @@ input[type="radio"].visually-hidden {
           font-size: 15px;
           line-height: 20px;
           text-transform: uppercase;
+          cursor: pointer;
         }
         .range-fieldset #price-min, .range-fieldset #price-max {
           width: 95px;
