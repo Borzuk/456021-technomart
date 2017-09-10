@@ -1842,7 +1842,7 @@ input[type="radio"].visually-hidden {
 /*Инфо блок на странице каталога*/
 .info-block {
   margin-top: 60px;
-  padding-top: 40px;
+  padding-top: 38px;
   padding-bottom: 60px;
   background-color: #f2f6f8;
 }
