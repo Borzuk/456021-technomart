@@ -1883,6 +1883,9 @@ input[type="radio"].visually-hidden {
     left: calc(50vw - 470px);
     -webkit-box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
             box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
+    background-image: url('../img/map-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 
   .modal.modal--cart {
