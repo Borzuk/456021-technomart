@@ -12,11 +12,6 @@
   <body>
     <!-- Шапка -->
     <header class="page-header">
-
-      <svg class="search-icon" width="10" height="10">
-               <use xlink:href="img/sprites.svg#user-icon"></use>
-      </svg>
-
       <!-- Верхняя плашка с поиском -->
       <section class="page-header__top">
         <div class="wrapper">
@@ -79,14 +74,18 @@
               <h3 class="slider__title">Перфораторы</h3>
               <span class="slider__description">Настоящие мужские игрушки</span>
             </div>
-            <img class="slider__image" src="img/perforator.jpg" width="620" height="266" alt="Перфораторы - настоящие мужские игрушки">
+            <div class="slider__image slider__image--perforator">
+              <span class="visually-hidden">Перфораторы - настоящие мужские игрушки</span>
+            </div>
           </div>
           <div class="slider__item visually-hidden">
             <div class="slider__wrap">
               <h3 class="slider__title">Дрели</h3>
               <span class="slider__description">Соседям на радость</span>
             </div>
-            <img class="slider__image" src="img/drill.jpg" width="620" height="266" alt="Дрели - соседям на радость">
+            <div class="slider__image slider__image--drill">
+              <span class="visually-hidden">Дрели - соседям на радость</span>
+            </div>
           </div>
 
           <div class="slider__control slider__control--radio">
@@ -135,8 +134,8 @@
         <section class="products__list">
           <article class="products__item">
             <div class="products__control">
-              <a href="#" class="btn btn--buy">Купить</a>
-              <a href="#" class="btn products__control-bookmark">В закладки</a>
+              <a href="/pathtobuy.html" class="btn btn--buy">Купить</a>
+              <a href="/pathtobookmark.html" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-2.jpg" width="200" height="175" alt="Перфоратор BOSCH BFG 9000">
             <h3 class="products__item-title">Перфоратор BOSCH BFG 9000</h3>
@@ -145,8 +144,8 @@
           </article>
           <article class="products__item">
             <div class="products__control">
-              <a href="#" class="btn btn--buy">Купить</a>
-              <a href="#" class="btn products__control-bookmark">В закладки</a>
+              <a href="/pathtobuy.html" class="btn btn--buy">Купить</a>
+              <a href="/pathtobookmark.html" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-3.jpg" width="200" height="175" alt="Перфоратор BOSCH BFG 3000">
             <h3 class="products__item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -155,8 +154,8 @@
           </article>
           <article class="products__item">
             <div class="products__control">
-              <a href="#" class="btn btn--buy">Купить</a>
-              <a href="#" class="btn products__control-bookmark">В закладки</a>
+              <a href="/pathtobuy.html" class="btn btn--buy">Купить</a>
+              <a href="/pathtobookmark.html" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-4.jpg" width="200" height="175" alt="Перфоратор BOSCH BFG 6000">
             <h3 class="products__item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -166,8 +165,8 @@
           <article class="products__item">
             <span class="label-new">new</span>
             <div class="products__control">
-              <a href="#" class="btn btn--buy">Купить</a>
-              <a href="#" class="btn products__control-bookmark">В закладки</a>
+              <a href="/pathtobuy.html" class="btn btn--buy">Купить</a>
+              <a href="/pathtobookmark.html" class="btn products__control-bookmark">В закладки</a>
             </div>
             <img class="products__item-picture" src="img/bosh-bfg-3.jpg" width="200" height="175" alt="Перфоратор BOSCH BFG 2000">
             <h3 class="products__item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -281,7 +280,7 @@
             заехав в наш офис:
           </p>
           <img class="open-map" src="img/mini_map.jpg" width="300" height="160" alt="Большая конюшенная улица, дом 15">
-          <a href="#" class="btn btn--uppercase btn__write-us">Заблудились? Напишите нам!</a>
+          <a href="/pathtofeedback.html" class="btn btn--uppercase btn__write-us">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -397,6 +396,18 @@
       <h2 class="visually-hidden">Схема проезда</h2>
       <button type="button" name="close-map" class="modal-close">Закрыть</button>
       <iframe src="https://yandex.ru/map-widget/v1/-/CBUfZRVJ8C" width="940" height="450"></iframe>
+    </section>
+
+  <!-- Всплывающее окно корзины -->
+    <section class="modal modal--cart">
+      <button type="button" name="close-cart" class="modal-close">Закрыть</button>
+      <div class="wrapper">
+        <span class="modal__message modal__message--green">Товар добавлен в корзину!</span>
+      </div>
+      <div class="wrapper-submit">
+        <a href="#" class="btn btn--uppercase btn--cart">Оформить заказ</a>
+        <a href="#" class="btn btn--uppercase btn--cart">Продолжить покупки</a>
+      </div>
     </section>
     <script src="js/script.min.js"></script>
   </body>
